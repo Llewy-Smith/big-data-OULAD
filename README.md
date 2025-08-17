@@ -1,42 +1,125 @@
 # Predicting Student Course Failure (OULAD)
 
-This project explores early prediction of student failure in university courses using the Open University Learning Analytics Dataset (OULAD). It was completed as part of an assessment task in the Master of Artificial Intelligence and Machine Learning program at the University of Adelaide.
+Machine learning system for early identification of at-risk university students using interpretable AI and the Open University Learning Analytics Dataset (OULAD).
 
-## Research Objective
+## 📊 Project Overview
 
-**Primary question:**  
-Within the first 25% of teaching time, how accurately and transparently can we predict which enrolments will result in a failed course outcome?
+Develops predictive models for early identification of student failure in university courses, completed as part of an assessment task in the **Master of Artificial Intelligence and Machine Learning** program at the University of Adelaide.
 
-The analysis includes:
-- Feature extraction across engagement, demographic, administrative, and course metadata
-- Exploratory pattern analysis
-- Early baseline modelling using Random Forest
-- Justification for feature engineering and class balancing strategies (e.g., SMOTE)
-- Visualisations for feature interaction and class imbalance
+### 🎯 Research Objective
 
-## Files in this Repository
+**Primary Research Question:** *Within the first 25% of teaching time, how accurately and transparently can we predict which enrolments will result in a failed course outcome?*
 
-- `Part_B.ipynb`: Jupyter Notebook with full code and outputs  
-- `Part B.pdf`: Final submitted report  
+## 🤖 Analysis Components
 
-## Dataset Access
+### Multi-Model Architecture
+- **Convolutional Neural Networks (CNN)**: 1D convolutions for tabular data analysis
+- **Multi-Layer Perceptron (MLP)**: Deep neural networks with regularisation
+- **Random Forest**: Ensemble baseline with feature importance analysis
+- **Logistic Regression**: Interpretable linear baseline model
 
-Due to size limitations, the OULAD dataset is not included in this repository. You can download the dataset directly from the Open University at:  
-[https://analyse.kmi.open.ac.uk/open-dataset](https://analyse.kmi.open.ac.uk/open-dataset)
+### Advanced Feature Engineering
+- **Course Difficulty Scoring**: Replaces categorical codes with numerical failure rates
+- **Early Assessment Features**: Performance indicators from first 25% of course
+- **Behavioral Analytics**: VLE engagement patterns and study consistency
+- **Ethical AI**: Bias detection and removal of discriminatory features
 
-After downloading, place the `.csv` files into the following directory relative to the notebook: `../Datasets/Open University Learning Analytics Dataset (OULAD)/`.
+### Technical Implementation
+- **Hyperparameter Optimisation**: Grid search with RFE feature selection
+- **Class Balancing**: SMOTE oversampling for imbalanced datasets
+- **Model Interpretability**: LIME explanations for individual predictions
+- **Data Leakage Prevention**: Proper temporal splitting and feature engineering
 
-## Required Libraries
+## 📁 Repository Structure
 
-This project uses the following Python libraries:
-
-```python
-from pathlib import Path
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, roc_auc_score
 ```
+├── Part_B.ipynb          # Initial baseline analysis with Random Forest
+├── Part_D.ipynb          # Advanced multi-model pipeline with ethical AI
+├── Part D.pdf            # Original baseline report
+└── README.md             # This file
+```
+
+## 📈 Dataset Information
+
+This project uses the **Open University Learning Analytics Dataset (OULAD)**, which contains data from courses presented by The Open University (UK) and student interactions with Virtual Learning Environment.
+
+### Dataset Access
+
+⚠️ **Note**: Due to GitHub size limitations, the OULAD dataset is not included in this repository.
+
+**To get the dataset:**
+1. Download from the official source: https://analyse.kmi.open.ac.uk/open-dataset
+2. Extract the CSV files
+3. Place them in the following directory structure:
+   ```
+   ../Datasets/Open University Learning Analytics Dataset (OULAD)/
+   ```
+
+## 🛠️ Installation & Setup
+
+### Prerequisites
+
+- Python 3.8+
+- Jupyter Notebook or JupyterLab
+- CUDA-compatible GPU (optional, for CNN training acceleration)
+
+### Required Libraries
+
+Install the required dependencies:
+
+```bash
+pip install pandas numpy scikit-learn seaborn matplotlib tensorflow keras lime shap imblearn
+```
+
+## 🚀 Getting Started
+
+### Advanced Pipeline (Recommended)
+1. **Clone the repository:**
+   ```bash
+   git clone [your-repo-url]
+   cd [repo-name]
+   ```
+
+2. **Download and setup the dataset** (see Dataset Access section)
+
+3. **Run the advanced analysis:**
+   ```bash
+   jupyter notebook Part_D.ipynb
+   ```
+
+### Baseline Analysis
+For the original Random Forest approach:
+```bash
+jupyter notebook Part_B.ipynb
+```
+
+## 🔑 Key Innovations
+
+- **Interpretable Course Features**: Numerical difficulty scores instead of cryptic codes
+- **Ethical AI Implementation**: Bias detection and fair feature selection
+- **Multi-Model Comparison**: CNN, MLP, Random Forest, and Logistic Regression
+- **Individual Explanations**: LIME analysis for every prediction with actionable insights
+
+## 🎓 Academic Context
+
+- **Institution**: University of Adelaide
+- **Program**: Master of Artificial Intelligence and Machine Learning
+- **Focus**: Ethical AI, educational data mining, and interpretable machine learning
+
+## 🤝 Contributing
+
+This is an academic project, but feedback and suggestions are welcome! Areas of particular interest include ethical AI improvements, novel model architectures, and enhanced interpretability methods.
+
+## 📄 License
+
+This project is for educational and research purposes. Please refer to the OULAD dataset license for data usage terms.
+
+## 🙏 Acknowledgments
+
+- **Open University** for providing the OULAD dataset and advancing educational analytics
+- **University of Adelaide** for academic supervision and computational resources
+- The open-source community for excellent machine learning libraries
+
+---
+
+*For technical details, refer to Part_D.ipynb for the advanced pipeline or Part_B.ipynb for the baseline approach.*
