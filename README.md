@@ -1,3 +1,4 @@
+<!-- README updated with assistance from Claude Sonnet 4 by Anthropic -->
 # Predicting Student Course Failure (OULAD)
 
 Machine learning system for early identification of at-risk university students using interpretable AI and the Open University Learning Analytics Dataset (OULAD).
@@ -118,6 +119,7 @@ This project is for educational and research purposes. Please refer to the OULAD
 
 - **Open University** for providing the OULAD dataset and advancing educational analytics
 - **University of Adelaide** for academic supervision and computational resources
+- **Claude Sonnet 4 (Anthropic)** for assistance with README documentation
 - The open-source community for excellent machine learning libraries
 
 ---
