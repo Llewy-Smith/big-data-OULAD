@@ -36,6 +36,7 @@ Develops predictive models for early identification of student failure in univer
 ```
 ├── Part_B.ipynb          # Initial baseline analysis with Random Forest
 ├── Part_D.ipynb          # Advanced multi-model pipeline with ethical AI
+├── Part_B.pdf            # Initial analysis, including visualisations and clustering
 ├── Part D.pdf            # Original baseline report
 └── README.md             # This file
 ```
